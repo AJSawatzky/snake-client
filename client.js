@@ -19,7 +19,7 @@ conn.on('connect', () => {
   });
 
   conn.on('data', () => {
-    conn.write('client disconnected from server')
+    console.log('client disconnected from server')
   });
   
   conn.setEncoding("utf8");
