@@ -9,10 +9,10 @@ Before you can run this client, you will need to be running the server side whic
 ## Final Product
 
 Client side
-![Alt text](Users/ajsawatzky/Desktop/snek.png)
+
 
 Server side
-![Alt text](Users/ajsawatzky/Desktop/snek2.png)
+
 
 ## Getting Started
 
