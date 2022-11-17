@@ -1,5 +1,6 @@
 const net = require("net");
-const { isPromise } = require("util/types");
+const { IP, PORT } = require('./constants');
+
 
 // establishes a connection with the game server
 const connect = function () {
@@ -7,20 +8,25 @@ const connect = function () {
     host: IP, // IP address here,
     port: PORT// PORT number here,
   });
+
+  
 conn.on('connect', () => {
-  console.log('Successfuly connected to game server')
-  });
+  console.log('Successfuly connected to game server!')
+  });  
+
   conn.on('connect', () => {
-    conn.write("Name: AJS")
+    conn.write('Name: AJS');
+  });
+
+  conn.on('data', () => {
+    conn.write('client disconnected from server')
   });
   
-  // interpret incoming data as text
   conn.setEncoding("utf8");
 
   return conn;
 };
 
-console.log("Connecting ...");
-connect()
-
-module.exports = {connect} 
+module.exports = { 
+  connect,
+};

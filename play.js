@@ -1,2 +1,7 @@
-const {connect} = require("./client.js");
+const {connect} = require("./client");
+const {setupInput} = require("./input");
+
+console.log("connecting...");
+
+setupInput(connect());
 
